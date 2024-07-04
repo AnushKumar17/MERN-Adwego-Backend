@@ -6,18 +6,15 @@
       "use": "@vercel/node"
     },
     {
-      "src": "routes/**/*.js",
+      "src": "/routes/**/*.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
-    {
-      "src": "/routes/(.*)",
-      "dest": "/routes/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.js"
-    }
+    { "src": "/api/auth(.*)", "dest": "/api/auth$1" },
+    { "src": "/api/users(.*)", "dest": "/api/users$1" },
+    { "src": "/api/adds(.*)", "dest": "/api/adds$1" },
+    { "src": "/api/comments(.*)", "dest": "/api/comments$1" },
+    { "src": "/(.*)", "dest": "/index.js" }
   ]
 }
