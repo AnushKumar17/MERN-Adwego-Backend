@@ -9,6 +9,8 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const app = express();
 
+console.log("Hogaya")
+
 const connectDB = async () => {
     try {
         await mongoose.connect(process.env.MONGO_URL);
